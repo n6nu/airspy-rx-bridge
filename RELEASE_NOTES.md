@@ -1,5 +1,22 @@
 # AirSpy RX Bridge — Release Notes
 
+## v0.99.1 — spectrum waterfall toggle (2026-05-02)
+
+The built-in spectrum / waterfall display can now be turned off from
+the **View menu** (or the **Ctrl+W** shortcut). Useful when you don't
+need the visual debugging and would rather not pay the CPU cost.
+
+- View → "Show spectrum waterfall" — checkable, default on.
+- New CLI flag `--no-waterfall` launches with the display off and
+  persists the choice to INI key `gui/waterfall_enabled`.
+- When off, three layers of work are skipped: per-IQ-buffer
+  `FftEngine::pushIq()` (the per-sample int16→float + Hann window
+  multiply at the full 2.5 Msps rate), the widget paint events,
+  and the 20 Hz row-poll timer. Roughly 2–5 % of one CPU core saved.
+- Default ON for first installs.
+
+Drop-in upgrade from v0.99.0; no INI migration.
+
 ## v0.99.0 — first beta (2026-05-01)
 
 First beta release. Initial scope: **AirSpy R2** (the original 24 MHz –

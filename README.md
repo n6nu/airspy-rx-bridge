@@ -18,13 +18,27 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
 ---
 
-## Latest release — v0.99.0 (first beta)
+## Latest release — v0.99.1
 
-Download: **[airspy-rx-bridge-0.99.0-setup.exe](airspy-rx-bridge-0.99.0-setup.exe)**
+Download: **[airspy-rx-bridge-0.99.1-setup.exe](airspy-rx-bridge-0.99.1-setup.exe)**
 
-**First beta release.** Initial scope: AirSpy R2 (the original 24 MHz –
-1.8 GHz, 12-bit, up to 10 Msps receiver). The bridge bundles
-`airspy.dll` so no separate AirSpy SDK install is needed.
+**Spectrum waterfall is now optional.** The built-in waterfall display
+can be turned off when you don't need the visual debug info.
+
+- **View → "Show spectrum waterfall"** (or **Ctrl+W**) toggles it.
+- New CLI flag `--no-waterfall` launches with the display already off.
+- Default ON — same look as v0.99.0 unless you turn it off.
+- When off, the bridge skips the per-IQ-buffer FFT compute work, paint
+  events, and 20 Hz row-poll timer. Roughly 2–5 % of one CPU core
+  saved at 2.5 Msps; more on slower boxes.
+
+Drop-in upgrade from v0.99.0; no INI migration.
+
+### v0.99.0 — first beta
+
+Initial scope: AirSpy R2 (the original 24 MHz – 1.8 GHz, 12-bit, up to
+10 Msps receiver). The bridge bundles `airspy.dll` so no separate
+AirSpy SDK install is needed.
 
 **What works:**
 
