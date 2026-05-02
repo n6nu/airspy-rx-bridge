@@ -18,9 +18,22 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
 ---
 
-## Latest release — v0.99.1
+## Latest release — v0.99.2 (early alpha)
 
-Download: **[airspy-rx-bridge-0.99.1-setup.exe](airspy-rx-bridge-0.99.1-setup.exe)**
+Download: **[airspy-rx-bridge-0.99.2-setup.exe](airspy-rx-bridge-0.99.2-setup.exe)**
+
+**Multi-instance support.** Run two bridges side-by-side — different
+WSJT-X / QMAP instances, no shared state. New `--instance <name>`
+CLI flag namespaces the INI / window title; new **Settings → "Linrad
+TCP port"** / **"Linrad UDP port"** rows let two bridges feed two
+QMAPs without colliding. See RELEASE_NOTES.md for the full
+multi-instance walkthrough.
+
+Drop-in upgrade from v0.99.1.
+
+---
+
+## v0.99.1 — Spectrum waterfall toggle
 
 **Spectrum waterfall is now optional.** The built-in waterfall display
 can be turned off when you don't need the visual debug info.

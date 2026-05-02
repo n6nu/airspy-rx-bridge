@@ -1,5 +1,24 @@
 # AirSpy RX Bridge — Release Notes
 
+## v0.99.2 — multi-instance support (multi-band ops) (2026-05-02)
+
+Run two bridges side-by-side — different WSJT-X / QMAP instances,
+no shared state.
+
+- New `--instance <name>` CLI flag namespaces the INI file, window
+  title, and taskbar entry. `airspy-rx-bridge.exe --instance 1296`
+  reads/writes `AirSpy RX Bridge - 1296.ini`.
+- New **Settings → "Linrad TCP port"** + **"Linrad UDP port"**
+  spinboxes (defaults 49812 / 50004). Increment per bridge instance
+  for multi-QMAP setups. CLI: `--linrad-tcp-port`,
+  `--linrad-udp-port`. Take effect on next launch.
+
+See RTL-SDR v0.99.8 notes for a full multi-instance walkthrough.
+AirSpy-side device-serial picker (for two AirSpy R2s on one machine)
+lands in a future version bump.
+
+Drop-in upgrade from v0.99.1.
+
 ## v0.99.1 — spectrum waterfall toggle (2026-05-02)
 
 The built-in spectrum / waterfall display can now be turned off from
