@@ -18,9 +18,24 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
 ---
 
-## Latest release — v0.99.2 (early alpha)
+## Latest release — v0.99.2 — **early alpha**
 
 Download: **[airspy-rx-bridge-0.99.2-setup.exe](airspy-rx-bridge-0.99.2-setup.exe)**
+
+> ⚠ **Status: early alpha.** This is the newest port in the n6nu
+> sdr-bridges family and the only one not yet promoted to the
+> 1.0 line. Expect rough edges; the AirSpy R2 path has been
+> bench-tested but not soaked through extended on-air sessions.
+> Sibling bridges (HackRF / RTL-SDR / SDRplay / iq-rx) are at
+> v1.0.x stable.
+
+This rebuild also picks up the bridge-core waterfall span fix
+(display labels now match the actual IQ rate instead of the
+hardcoded 2 MHz default).
+
+---
+
+### v0.99.2 — Multi-instance support (multi-band ops)
 
 **Multi-instance support.** Run two bridges side-by-side — different
 WSJT-X / QMAP instances, no shared state. New `--instance <name>`
