@@ -1,5 +1,19 @@
 # AirSpy RX Bridge — Release Notes
 
+## v0.99.3 — opt-in CAT server for WSJT-X Doppler tracking (2026-05-04)
+
+Adds the same opt-in CAT pattern as the rest of the family. With
+WSJT-X **Rig = Hamlib NET rigctl** at `127.0.0.1:4539`, Doppler
+tracking commands corrected freq directly to the bridge.
+
+- Rigctld TCP server on port **4539**, default OFF.
+- Toggle in Settings → CAT server (or `--cat`). Restart bridge.
+- Auto-detect UDP mute when a CAT client is connected.
+- Live source indicator in window title.
+- Picks up the bridge-core data-mode-PTT fixes (PKTUSB / PKTLSB).
+
+INI compatible with v0.99.2. Drop-in upgrade.
+
 ## v0.99.2 — multi-instance support (multi-band ops) (2026-05-02)
 
 Run two bridges side-by-side — different WSJT-X / QMAP instances,
