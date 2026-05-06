@@ -18,7 +18,19 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
 ---
 
-## Latest release — v0.99.2 — **early alpha**
+## Latest release — v1.1.0
+
+Download: **[airspy-rx-bridge-1.1.0-setup.exe](https://github.com/n6nu/airspy-rx-bridge/releases/latest/download/airspy-rx-bridge-1.1.0-setup.exe)**
+
+What's new in v1.1.0 (2026-05-05) -- UI refresh. Main window now
+fixed-size 400x640. Settings moved from a button to a top-level
+**Settings** menu (`Ctrl+,`). New **Linrad rate** readout in the
+State grid. Settings dialog reflowed side-by-side, with a new
+**Linrad IQ rate** combo (defaults to "96 kHz (QMAP Default)").
+Drop-in upgrade; 96 kHz wire format unchanged.
+
+---
+### Previous release — v0.99.2 — **early alpha**
 
 Download: **[airspy-rx-bridge-0.99.2-setup.exe](airspy-rx-bridge-0.99.2-setup.exe)**
 
@@ -32,8 +44,6 @@ Download: **[airspy-rx-bridge-0.99.2-setup.exe](airspy-rx-bridge-0.99.2-setup.ex
 This rebuild also picks up the bridge-core waterfall span fix
 (display labels now match the actual IQ rate instead of the
 hardcoded 2 MHz default).
-
----
 
 ### v0.99.2 — Multi-instance support (multi-band ops)
 
