@@ -23,12 +23,17 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 V3 is close to release, and the current build is well ahead of the published
 releases below:
 
-**[airspy-rx-bridge-3.1.8-setup.exe](https://bridges.n6nu.org/beta/airspy-rx-bridge-3.1.8-setup.exe)**
+**[airspy-rx-bridge-3.1.9-setup.exe](https://bridges.n6nu.org/beta/airspy-rx-bridge-3.1.9-setup.exe)**
 
 Prefer it over the releases listed below: every installer up to and including
 v2.1.1 was packaged without the Microsoft Visual C++ runtime, so on a clean
 Windows machine it starts and closes again immediately. This build carries the
 runtime with it, along with everything since June.
+
+This build also makes the second slice (roamer on TCI +1) opt-in rather than
+on by default, and stops the Settings dialog writing its own fallbacks over
+this app's defaults -- the CAT port in particular, since every bridge uses a
+different one so several can run side by side.
 
 It also offers to install the AirSpy USB driver (WinUSB via Zadig) as an
 optional step during setup -- an AirSpy will not open until that driver is
